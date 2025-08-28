@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #f8e9dd;
+  --color-red: #ec755d;
+  --color-light: #fffbf6;
+  --color-white: #ffffff;
+  --color-dark-brown: #382314;
+  --color-cyan: #76b5bc;
+  --color-medium-brown: #92857a;
+
+  /* font families */
+  --default-font-family: "DM Sans Variable", "Arial", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply text-lg text-medium-brown font-normal leading-[1] min-h-screen bg-cream flex items-center justify-center;
+  }
+}
+
+@layer components {
+  .chart-item span {
+    display: none;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 18px;
+    line-height: 100%;
+    padding: 13px;
+    border-radius: 5px;
+  }
+  .chart-item:hover span {
+    width: 71px;
+    height: 40px;
+    display: block;
+    background-color: #382314;
+    color: #fffbf6;
+  }
+}
